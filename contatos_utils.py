@@ -7,9 +7,7 @@ def csv_para_contatos(caminho, encoding="latin_1"):
         leitor = csv.reader(arquivo)
 
         for linha in leitor:
-            id = linha[0]
-            nome = linha[1]
-            email = linha[2]
+            id, nome, email = linha
             contato = Contato(id, nome, email)
             contatos.append(contato)
     return contatos
